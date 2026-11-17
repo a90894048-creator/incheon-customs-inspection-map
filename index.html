@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>인천항 세관검사 창고 순서</title>
+<style>
+/* Leaflet 1.9.4 stylesheet (BSD-2-Clause, (c) Vladimir Agafonkin) — 외부 의존 없이 쓰려고 파일에 포함 */
+.leaflet-image-layer,.leaflet-layer,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-pane,.leaflet-pane>canvas,.leaflet-pane>svg,.leaflet-tile,.leaflet-tile-container,.leaflet-zoom-box{position:absolute;left:0;top:0}.leaflet-container{overflow:hidden}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-user-drag:none}.leaflet-tile::selection{background:0 0}.leaflet-safari .leaflet-tile{image-rendering:-webkit-optimize-contrast}.leaflet-safari .leaflet-tile-container{width:1600px;height:1600px;-webkit-transform-origin:0 0}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-container .leaflet-overlay-pane svg{max-width:none!important;max-height:none!important}.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer{max-width:none!important;max-height:none!important;width:auto;padding:0}.leaflet-container img.leaflet-tile{mix-blend-mode:plus-lighter}.leaflet-container.leaflet-touch-zoom{-ms-touch-action:pan-x pan-y;touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{-ms-touch-action:pinch-zoom;touch-action:none;touch-action:pinch-zoom}.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom{-ms-touch-action:none;touch-action:none}.leaflet-container{-webkit-tap-highlight-color:transparent}.leaflet-container a{-webkit-tap-highlight-color:rgba(51,181,229,.4)}.leaflet-tile{filter:inherit;visibility:hidden}.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-box{width:0;height:0;-moz-box-sizing:border-box;box-sizing:border-box;z-index:800}.leaflet-overlay-pane svg{-moz-user-select:none}.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}.leaflet-vml-shape{width:1px;height:1px}.lvml{behavior:url(#default#VML);display:inline-block;position:absolute}.leaflet-control{position:relative;z-index:800;pointer-events:visiblePainted;pointer-events:auto}.leaflet-bottom,.leaflet-top{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-control{float:left;clear:both}.leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-fade-anim .leaflet-popup{opacity:0;-webkit-transition:opacity .2s linear;-moz-transition:opacity .2s linear;transition:opacity .2s linear}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}.leaflet-zoom-animated{-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0}svg.leaflet-zoom-animated{will-change:transform}.leaflet-zoom-anim .leaflet-zoom-animated{-webkit-transition:-webkit-transform .25s cubic-bezier(0,0,.25,1);-moz-transition:-moz-transform .25s cubic-bezier(0,0,.25,1);transition:transform .25s cubic-bezier(0,0,.25,1)}.leaflet-pan-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-tile{-webkit-transition:none;-moz-transition:none;transition:none}.leaflet-zoom-anim .leaflet-zoom-hide{visibility:hidden}.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:-webkit-grab;cursor:-moz-grab;cursor:grab}.leaflet-crosshair,.leaflet-crosshair .leaflet-interactive{cursor:crosshair}.leaflet-control,.leaflet-popup-pane{cursor:auto}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive,.leaflet-dragging .leaflet-marker-draggable{cursor:move;cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:grabbing}.leaflet-image-layer,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}.leaflet-image-layer.leaflet-interactive,.leaflet-marker-icon.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive,svg.leaflet-image-layer.leaflet-interactive path{pointer-events:visiblePainted;pointer-events:auto}.leaflet-container{background:#ddd;outline-offset:1px}.leaflet-container a{color:#0078a8}.leaflet-zoom-box{border:2px dotted #38f;background:rgba(255,255,255,.5)}.leaflet-container{font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;font-size:12px;font-size:.75rem;line-height:1.5}.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}.leaflet-bar a{background-color:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:#000}.leaflet-bar a,.leaflet-control-layers-toggle{background-position:50% 50%;background-repeat:no-repeat;display:block}.leaflet-bar a:focus,.leaflet-bar a:hover{background-color:#f4f4f4}.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}.leaflet-bar a.leaflet-disabled{cursor:default;background-color:#f4f4f4;color:#bbb}.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px}.leaflet-touch .leaflet-bar a:first-child{border-top-left-radius:2px;border-top-right-radius:2px}.leaflet-touch .leaflet-bar a:last-child{border-bottom-left-radius:2px;border-bottom-right-radius:2px}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px 'Lucida Console',Monaco,monospace;text-indent:1px}.leaflet-touch .leaflet-control-zoom-in,.leaflet-touch .leaflet-control-zoom-out{font-size:22px}.leaflet-control-layers{box-shadow:0 1px 5px rgba(0,0,0,.4);background:#fff;border-radius:5px}.leaflet-control-layers-toggle{background-image:url(images/layers.png);width:36px;height:36px}.leaflet-retina .leaflet-control-layers-toggle{background-image:url(images/layers-2x.png);background-size:26px 26px}.leaflet-touch .leaflet-control-layers-toggle{width:44px;height:44px}.leaflet-control-layers .leaflet-control-layers-list,.leaflet-control-layers-expanded .leaflet-control-layers-toggle{display:none}.leaflet-control-layers-expanded .leaflet-control-layers-list{display:block;position:relative}.leaflet-control-layers-expanded{padding:6px 10px 6px 6px;color:#333;background:#fff}.leaflet-control-layers-scrollbar{overflow-y:scroll;overflow-x:hidden;padding-right:5px}.leaflet-control-layers-selector{margin-top:2px;position:relative;top:1px}.leaflet-control-layers label{display:block;font-size:13px;font-size:1.08333em}.leaflet-control-layers-separator{height:0;border-top:1px solid #ddd;margin:5px -10px 5px -6px}.leaflet-default-icon-path{background-image:url(images/marker-icon.png)}.leaflet-container .leaflet-control-attribution{background:#fff;background:rgba(255,255,255,.8);margin:0}.leaflet-control-attribution,.leaflet-control-scale-line{padding:0 5px;color:#333;line-height:1.4}.leaflet-control-attribution a{text-decoration:none}.leaflet-control-attribution a:focus,.leaflet-control-attribution a:hover{text-decoration:underline}.leaflet-attribution-flag{display:inline!important;vertical-align:baseline!important;width:1em;height:.6669em}.leaflet-left .leaflet-control-scale{margin-left:5px}.leaflet-bottom .leaflet-control-scale{margin-bottom:5px}.leaflet-control-scale-line{border:2px solid #777;border-top:none;line-height:1.1;padding:2px 5px 1px;white-space:nowrap;-moz-box-sizing:border-box;box-sizing:border-box;background:rgba(255,255,255,.8);text-shadow:1px 1px #fff}.leaflet-control-scale-line:not(:first-child){border-top:2px solid #777;border-bottom:none;margin-top:-2px}.leaflet-control-scale-line:not(:first-child):not(:last-child){border-bottom:2px solid #777}.leaflet-touch .leaflet-bar,.leaflet-touch .leaflet-control-attribution,.leaflet-touch .leaflet-control-layers{box-shadow:none}.leaflet-touch .leaflet-bar,.leaflet-touch .leaflet-control-layers{border:2px solid rgba(0,0,0,.2);background-clip:padding-box}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}.leaflet-popup-content{margin:13px 24px 13px 20px;line-height:1.3;font-size:13px;font-size:1.08333em;min-height:1px}.leaflet-popup-content p{margin:17px 0;margin:1.3em 0}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-top:-1px;margin-left:-20px;overflow:hidden;pointer-events:none}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;pointer-events:auto;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}.leaflet-container a.leaflet-popup-close-button{position:absolute;top:0;right:0;border:none;text-align:center;width:24px;height:24px;font:16px/24px Tahoma,Verdana,sans-serif;color:#757575;text-decoration:none;background:0 0}.leaflet-container a.leaflet-popup-close-button:focus,.leaflet-container a.leaflet-popup-close-button:hover{color:#585858}.leaflet-popup-scrolled{overflow:auto}.leaflet-oldie .leaflet-popup-content-wrapper{-ms-zoom:1}.leaflet-oldie .leaflet-popup-tip{width:24px;margin:0 auto}.leaflet-oldie .leaflet-control-layers,.leaflet-oldie .leaflet-control-zoom,.leaflet-oldie .leaflet-popup-content-wrapper,.leaflet-oldie .leaflet-popup-tip{border:1px solid #999}.leaflet-div-icon{background:#fff;border:1px solid #666}.leaflet-tooltip{position:absolute;padding:6px;background-color:#fff;border:1px solid #fff;border-radius:3px;color:#222;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none;box-shadow:0 1px 3px rgba(0,0,0,.4)}.leaflet-tooltip.leaflet-interactive{cursor:pointer;pointer-events:auto}.leaflet-tooltip-bottom:before,.leaflet-tooltip-left:before,.leaflet-tooltip-right:before,.leaflet-tooltip-top:before{position:absolute;pointer-events:none;border:6px solid transparent;background:0 0;content:""}.leaflet-tooltip-bottom{margin-top:6px}.leaflet-tooltip-top{margin-top:-6px}.leaflet-tooltip-bottom:before,.leaflet-tooltip-top:before{left:50%;margin-left:-6px}.leaflet-tooltip-top:before{bottom:0;margin-bottom:-12px;border-top-color:#fff}.leaflet-tooltip-bottom:before{top:0;margin-top:-12px;margin-left:-6px;border-bottom-color:#fff}.leaflet-tooltip-left{margin-left:-6px}.leaflet-tooltip-right{margin-left:6px}.leaflet-tooltip-left:before,.leaflet-tooltip-right:before{top:50%;margin-top:-6px}.leaflet-tooltip-left:before{right:0;margin-right:-12px;border-left-color:#fff}.leaflet-tooltip-right:before{left:0;margin-left:-12px;border-right-color:#fff}@media print{.leaflet-control{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+<style>
+:root{
+  --bg:#f4f5f7; --panel:#ffffff; --ink:#15181d; --ink2:#5b616e; --line:#e2e5ea;
+  --accent:#1b63d8; --accent-soft:#e8f0fe; --shadow:0 1px 3px rgba(16,24,40,.08),0 8px 24px rgba(16,24,40,.06);
+  --zE:#2563eb; --zF:#059669; --zG:#d97706; --zH:#dc2626;
+  --zA:#7c3aed; --zB:#0891b2; --zC:#db2777; --zD:#65a30d;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1116; --panel:#171b22; --ink:#e8eaee; --ink2:#99a1b0; --line:#272d37;
+    --accent:#5b93f5; --accent-soft:#1c2740; --shadow:0 1px 3px rgba(0,0,0,.4);
+  }
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Pretendard","Malgun Gothic","맑은 고딕",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  -webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit;cursor:pointer}
+
+/* ---------- layout ---------- */
+#app{display:flex;flex-direction:column;height:100dvh}
+header{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--panel);
+  border-bottom:1px solid var(--line);flex:none;z-index:1000}
+h1{font-size:15px;margin:0;font-weight:700;letter-spacing:-.02em;white-space:nowrap}
+.rev{font-size:11px;color:var(--ink2);background:var(--bg);border:1px solid var(--line);
+  padding:2px 7px;border-radius:999px;white-space:nowrap}
+.search{flex:1;position:relative;min-width:110px;max-width:420px}
+.search input{width:100%;padding:8px 30px 8px 32px;border:1px solid var(--line);border-radius:9px;
+  background:var(--bg);color:var(--ink);font-size:14px;outline:none}
+.search input:focus{border-color:var(--accent);background:var(--panel)}
+.search .ic{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--ink2);font-size:13px}
+.search .clr{position:absolute;right:4px;top:50%;transform:translateY(-50%);border:0;background:none;
+  color:var(--ink2);padding:4px 8px;display:none;font-size:15px}
+.search.has .clr{display:block}
+.tbtn{border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:8px 11px;
+  font-size:13px;white-space:nowrap}
+.tbtn:hover{border-color:var(--accent);color:var(--accent)}
+.tbtn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+
+main{flex:1;display:flex;min-height:0}
+aside{width:340px;flex:none;background:var(--panel);border-right:1px solid var(--line);
+  display:flex;flex-direction:column;min-height:0}
+#map{flex:1;min-width:0;background:var(--bg)}
+
+/* ---------- sidebar ---------- */
+.filters{padding:10px 12px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:9px}
+.seg{display:flex;gap:4px;background:var(--bg);padding:3px;border-radius:10px}
+.seg button{flex:1;border:0;background:none;padding:7px 4px;border-radius:8px;font-size:13px;
+  font-weight:600;color:var(--ink2)}
+.seg button.on{background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
+.chips{display:flex;gap:5px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 11px;
+  font-size:12px;font-weight:600;display:flex;align-items:center;gap:5px}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--c);display:block;font-style:normal}
+.chip.off{opacity:.38}
+.flow{font-size:11px;color:var(--ink2);line-height:1.5}
+
+.list{flex:1;overflow:auto;padding:4px 0 12px;-webkit-overflow-scrolling:touch}
+.zhead{position:sticky;top:0;background:var(--panel);padding:9px 12px 5px;font-size:12px;
+  font-weight:700;color:var(--ink2);display:flex;align-items:center;gap:7px;z-index:2;
+  border-bottom:1px solid var(--line)}
+.zhead b{color:var(--c);font-size:13px}
+.zhead .cnt{margin-left:auto;font-weight:500;opacity:.8}
+.item{display:flex;gap:9px;align-items:flex-start;padding:9px 12px;cursor:pointer;
+  border-bottom:1px solid var(--line)}
+.item:hover{background:var(--accent-soft)}
+.item.sel{background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
+.num{flex:none;width:21px;height:21px;border-radius:50%;background:var(--c);color:#fff;
+  font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.meta{min-width:0;flex:1}
+.nm{font-size:13.5px;font-weight:600;line-height:1.35;word-break:keep-all}
+.ad{font-size:11.5px;color:var(--ink2);margin-top:2px;line-height:1.35}
+.pick{flex:none;width:22px;height:22px;border:1.5px solid var(--line);border-radius:6px;
+  background:var(--panel);font-size:12px;color:transparent;display:flex;align-items:center;
+  justify-content:center;margin-top:1px}
+.pick.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.empty{padding:28px 16px;text-align:center;color:var(--ink2);font-size:13px}
+
+/* ---------- route bar ---------- */
+.routebar{flex:none;border-top:1px solid var(--line);background:var(--panel);padding:9px 12px;
+  display:none;gap:8px;align-items:center}
+.routebar.on{display:flex}
+.routebar .t{font-size:12.5px;font-weight:600;flex:1}
+.routebar .t span{color:var(--accent)}
+.mini{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:6px 10px;font-size:12px}
+.mini.p{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ---------- markers ---------- */
+.pin{width:26px;height:26px;border-radius:50% 50% 50% 2px;transform:rotate(-45deg);
+  background:var(--c);border:2px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.35);
+  display:flex;align-items:center;justify-content:center}
+.pin b{transform:rotate(45deg);color:#fff;font-size:12px;font-weight:700;line-height:1}
+.pin.act{width:34px;height:34px;z-index:900;border-width:3px}
+.pin.act b{font-size:15px}
+.pin.dim{opacity:.3}
+.arw{color:var(--c);font-size:15px;line-height:1;text-shadow:0 0 3px #fff,0 0 3px #fff}
+
+/* ---------- popup ---------- */
+.leaflet-popup-content-wrapper{border-radius:12px;box-shadow:var(--shadow);background:var(--panel);color:var(--ink)}
+.leaflet-popup-content{margin:12px 14px;min-width:210px}
+.leaflet-popup-tip{background:var(--panel)}
+.pp .bdg{display:inline-block;background:var(--c);color:#fff;font-size:11px;font-weight:700;
+  padding:2px 8px;border-radius:999px;margin-bottom:6px}
+.pp .dp{font-size:11px;color:var(--ink2);margin-left:6px}
+.pp h3{margin:0 0 4px;font-size:15px;font-weight:700;word-break:keep-all}
+.pp p{margin:0 0 10px;font-size:12.5px;color:var(--ink2);line-height:1.4}
+.pp .btns{display:flex;flex-wrap:wrap;gap:6px}
+.pp .btns a,.pp .btns button{border:1px solid var(--line);background:var(--bg);border-radius:8px;
+  padding:6px 10px;font-size:12px;text-decoration:none;color:var(--ink)}
+.pp .btns a:hover,.pp .btns button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- route sheet ---------- */
+.modal{position:fixed;inset:0;background:rgba(10,14,20,.45);display:none;z-index:2000;
+  align-items:center;justify-content:center;padding:16px}
+.modal.on{display:flex}
+.sheet{background:var(--panel);border-radius:14px;box-shadow:var(--shadow);width:100%;max-width:430px;
+  max-height:84dvh;display:flex;flex-direction:column;overflow:hidden}
+.sheet header{border-bottom:1px solid var(--line);padding:13px 15px;justify-content:space-between}
+.sheet h2{margin:0;font-size:14.5px}
+.sheet .body{overflow:auto;padding:6px 0}
+.step{display:flex;gap:10px;padding:10px 15px;align-items:flex-start;border-bottom:1px solid var(--line)}
+.step .n{flex:none;width:22px;height:22px;border-radius:50%;background:var(--c);color:#fff;font-size:11px;
+  font-weight:700;display:flex;align-items:center;justify-content:center}
+.step .go{margin-left:auto;flex:none;font-size:11.5px;text-decoration:none;color:var(--accent);
+  border:1px solid var(--line);border-radius:7px;padding:5px 8px}
+.sheet .foot{border-top:1px solid var(--line);padding:10px 15px;display:flex;gap:8px;justify-content:flex-end}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,14px);background:#15181d;color:#fff;
+  padding:9px 16px;border-radius:999px;font-size:13px;opacity:0;pointer-events:none;
+  transition:.22s;z-index:3000}
+.toast.on{opacity:.95;transform:translate(-50%,0)}
+
+/* ---------- mobile ---------- */
+.mtabs{display:none;flex:none;border-top:1px solid var(--line);background:var(--panel)}
+.mtabs button{flex:1;border:0;background:none;padding:11px 0;font-size:13px;font-weight:600;color:var(--ink2)}
+.mtabs button.on{color:var(--accent);box-shadow:inset 0 -2px 0 var(--accent)}
+@media (max-width:760px){
+  header{flex-wrap:wrap;padding:9px 12px 10px;gap:8px}
+  h1{font-size:14px}
+  .search{order:3;flex-basis:100%;max-width:none}
+  main{position:relative}
+  aside{position:absolute;inset:0;width:auto;border-right:0;z-index:600}
+  #map{position:absolute;inset:0}
+  body[data-view="map"] aside{display:none}
+  body[data-view="list"] #map{visibility:hidden}
+  .mtabs{display:flex}
+}
+@media print{
+  header .search,header .tbtn,.mtabs,.routebar,#map,.filters .seg{display:none!important}
+  aside{width:auto;border:0}
+  .list{overflow:visible}
+  body{background:#fff}
+}
+</style>
+</head>
+<body data-view="map">
+<div id="app">
+  <header>
+    <h1>인천항 세관검사 창고</h1>
+    <span class="rev" id="rev">기준 2026-11-09</span>
+    <div class="search" id="sw">
+      <span class="ic">⌕</span>
+      <input id="q" type="search" placeholder="창고명 · 주소 검색 (예: 선광, 축항대로)" autocomplete="off">
+      <button class="clr" id="qc" aria-label="지우기">×</button>
+    </div>
+    <button class="tbtn" id="sat">위성</button>
+    <button class="tbtn" id="fit">전체</button>
+  </header>
+
+  <main>
+    <aside>
+      <div class="filters">
+        <div class="seg" id="dept">
+          <button data-d="all" class="on">전체</button>
+          <button data-d="수입통관 1과">수입 1과</button>
+          <button data-d="수입통관 2과">수입 2과</button>
+        </div>
+        <div class="chips" id="chips"></div>
+        <div class="flow" id="flow"></div>
+      </div>
+      <div class="list" id="list"></div>
+      <div class="routebar" id="rbar">
+        <span class="t"><span id="rn">0</span>곳 선택됨</span>
+        <button class="mini" id="rclr">해제</button>
+        <button class="mini p" id="ropen">동선 보기</button>
+      </div>
+    </aside>
+    <div id="map"></div>
+  </main>
+
+  <div class="mtabs">
+    <button data-v="map" class="on">지도</button>
+    <button data-v="list">목록</button>
+  </div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="sheet">
+    <header><h2>오늘 동선 (검사 순서대로)</h2><button class="mini" id="mclose">닫기</button></header>
+    <div class="body" id="steps"></div>
+    <div class="foot">
+      <button class="mini" id="copyall">목록 복사</button>
+      <button class="mini p" id="mclose2">확인</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+/* ===== 데이터: 창고 순서·주소·좌표 (엑셀 2026-11-09판 기준) ===== */
+const DATA = [
+ {"dept": "수입통관 1과", "zone": "E", "order": 1, "name": "서광로지스보세창고", "addr": "인천광역시 제물포구 축항대로118번길 114", "lat": 37.446586, "lon": 126.60395},
+ {"dept": "수입통관 1과", "zone": "E", "order": 2, "name": "조양 보세창고", "addr": "인천광역시 제물포구 축항대로118번길 147", "lat": 37.443443, "lon": 126.60303},
+ {"dept": "수입통관 1과", "zone": "E", "order": 3, "name": "희창물산(주)인천지점 보세창고", "addr": "인천광역시 제물포구 축항대로86번길 138", "lat": 37.445455, "lon": 126.598808},
+ {"dept": "수입통관 1과", "zone": "E", "order": 4, "name": "태광통상(주)보세창고", "addr": "인천광역시 제물포구 연안부두로 158", "lat": 37.446166, "lon": 126.595709},
+ {"dept": "수입통관 1과", "zone": "E", "order": 5, "name": "그린물류(주)보세창고", "addr": "인천광역시 제물포구 연안부두로 162", "lat": 37.445676, "lon": 126.596155},
+ {"dept": "수입통관 1과", "zone": "F", "order": 1, "name": "원인터내셔널", "addr": "인천광역시 제물포구 서해대로 143", "lat": 37.442584, "lon": 126.618528},
+ {"dept": "수입통관 1과", "zone": "F", "order": 2, "name": "우련국제물류㈜보세창고", "addr": "인천광역시 제물포구 서해대로30번길 13", "lat": 37.432997, "lon": 126.617531},
+ {"dept": "수입통관 1과", "zone": "F", "order": 3, "name": "선광종합물류㈜ 제2보세창고", "addr": "인천광역시 제물포구 서해대로30번길 32", "lat": 37.431697, "lon": 126.617641},
+ {"dept": "수입통관 1과", "zone": "F", "order": 4, "name": "인천항공동물류보세창고", "addr": "인천광역시 제물포구 서해대로30번길 35", "lat": 37.433038, "lon": 126.619739},
+ {"dept": "수입통관 1과", "zone": "F", "order": 5, "name": "㈜대우로지스틱스보세창고", "addr": "인천광역시 제물포구 축항대로290번길 164", "lat": 37.435934, "lon": 126.617389},
+ {"dept": "수입통관 1과", "zone": "F", "order": 6, "name": "(주)가람통상 보세창고", "addr": "인천광역시 제물포구 축항대로290번길 103", "lat": 37.439055, "lon": 126.62212},
+ {"dept": "수입통관 1과", "zone": "G", "order": 1, "name": "(주)화인통상", "addr": "인천광역시 제물포구 서해대로94번길 130", "lat": 37.430976, "lon": 126.628789},
+ {"dept": "수입통관 1과", "zone": "G", "order": 2, "name": "인천콜드프라자 보세창고", "addr": "인천광역시 제물포구 서해대로94번길 98", "lat": 37.432003, "lon": 126.626023},
+ {"dept": "수입통관 1과", "zone": "G", "order": 3, "name": "선명아암물류㈜", "addr": "인천광역시 제물포구 서해대로94번길 96", "lat": 37.433163, "lon": 126.625635},
+ {"dept": "수입통관 1과", "zone": "G", "order": 4, "name": "백마제2보세창고", "addr": "인천광역시 제물포구 서해대로94번길 57-70", "lat": 37.437463, "lon": 126.625587},
+ {"dept": "수입통관 1과", "zone": "G", "order": 5, "name": "진아아암물류 보세창고", "addr": "인천광역시 제물포구 축항대로296번길 125", "lat": 37.436891, "lon": 126.627519},
+ {"dept": "수입통관 1과", "zone": "H", "order": 1, "name": "백마보세창고", "addr": "인천광역시 제물포구 축항대로 124", "lat": 37.453067, "lon": 126.609467},
+ {"dept": "수입통관 1과", "zone": "H", "order": 2, "name": "(주)라인올물류 컨테이너 보세창고", "addr": "인천광역시 제물포구 축항대로166번길 34", "lat": 37.450565, "lon": 126.612949},
+ {"dept": "수입통관 1과", "zone": "H", "order": 3, "name": "(주)인성물류 보세창고", "addr": "인천광역시 제물포구 축항대로296번길 47", "lat": 37.44357, "lon": 126.629456},
+ {"dept": "수입통관 1과", "zone": "H", "order": 4, "name": "태평양물류(주) 보세창고", "addr": "인천광역시 제물포구 축항대로290번길 13", "lat": 37.446769, "lon": 126.626876},
+ {"dept": "수입통관 2과", "zone": "A", "order": 1, "name": "듀얼에어엔씨", "addr": "인천광역시 제물포구 보세로26번길 23", "lat": 37.489028, "lon": 126.619639},
+ {"dept": "수입통관 2과", "zone": "A", "order": 2, "name": "대보", "addr": "인천광역시 제물포구 보세로 95", "lat": 37.484896, "lon": 126.614429},
+ {"dept": "수입통관 2과", "zone": "A", "order": 3, "name": "삼미", "addr": "인천광역시 제물포구 보세로 113", "lat": 37.486797, "lon": 126.611351},
+ {"dept": "수입통관 2과", "zone": "A", "order": 4, "name": "인천로지스틱스", "addr": "인천광역시 제물포구 보세로 113", "lat": 37.486797, "lon": 126.611351},
+ {"dept": "수입통관 2과", "zone": "A", "order": 5, "name": "하이젤", "addr": "인천광역시 제물포구 월미로 22", "lat": 37.47631, "lon": 126.615682},
+ {"dept": "수입통관 2과", "zone": "B", "order": 1, "name": "신화유통", "addr": "인천광역시 제물포구 축항대로69번길 12", "lat": 37.457967, "lon": 126.606684},
+ {"dept": "수입통관 2과", "zone": "B", "order": 2, "name": "세광", "addr": "인천광역시 제물포구 축항대로87번길 10", "lat": 37.457037, "lon": 126.608508},
+ {"dept": "수입통관 2과", "zone": "B", "order": 3, "name": "한진싸이로", "addr": "인천광역시 제물포구 축항대로165번길 37", "lat": 37.457247, "lon": 126.616535},
+ {"dept": "수입통관 2과", "zone": "B", "order": 4, "name": "세계로", "addr": "인천광역시 제물포구 서해대로271번길 35", "lat": 37.453382, "lon": 126.62289},
+ {"dept": "수입통관 2과", "zone": "B", "order": 5, "name": "유앤아이", "addr": "인천광역시 제물포구 서해대로271번길 17", "lat": 37.452403, "lon": 126.624078},
+ {"dept": "수입통관 2과", "zone": "B", "order": 6, "name": "베델", "addr": "인천광역시 제물포구 서해대로271번길 3", "lat": 37.451878, "lon": 126.624583},
+ {"dept": "수입통관 2과", "zone": "B", "order": 7, "name": "(주)에스엠보세창고", "addr": "인천광역시 제물포구 축항대로291번길 30", "lat": 37.449867, "lon": 126.629757},
+ {"dept": "수입통관 2과", "zone": "C", "order": 1, "name": "(주)동방 인천 물류센터", "addr": "인천광역시 연수구 인천타워대로639번길 61", "lat": 37.424458, "lon": 126.615733},
+ {"dept": "수입통관 2과", "zone": "C", "order": 2, "name": "(주)영진공사 아암 제2보세창고", "addr": "인천광역시 연수구 인천타워대로639번길 51", "lat": 37.424721, "lon": 126.617022},
+ {"dept": "수입통관 2과", "zone": "C", "order": 3, "name": "(주)영진공사 종합보세사업장", "addr": "인천광역시 제물포구 서해대로209번길 23", "lat": 37.447023, "lon": 126.620424},
+ {"dept": "수입통관 2과", "zone": "C", "order": 4, "name": "하람", "addr": "인천광역시 제물포구 축항대로212번길 18", "lat": 37.450116, "lon": 126.61849},
+ {"dept": "수입통관 2과", "zone": "C", "order": 5, "name": "진아", "addr": "인천광역시 제물포구 축항대로212번길 17", "lat": 37.449337, "lon": 126.619234},
+ {"dept": "수입통관 2과", "zone": "D", "order": 1, "name": "더로지스", "addr": "인천광역시 제물포구 축항대로86번길 70", "lat": 37.451327, "lon": 126.602061},
+ {"dept": "수입통관 2과", "zone": "D", "order": 2, "name": "경원물산", "addr": "인천광역시 제물포구 연안부두로99번길 15", "lat": 37.451269, "lon": 126.599678},
+ {"dept": "수입통관 2과", "zone": "D", "order": 3, "name": "더우", "addr": "인천광역시 제물포구 축항대로86번길 15", "lat": 37.455118, "lon": 126.606451},
+ {"dept": "수입통관 2과", "zone": "D", "order": 4, "name": "동원로엑스항동보세창고", "addr": "인천광역시 제물포구 축항대로 194", "lat": 37.451578, "lon": 126.617798},
+ {"dept": "수입통관 2과", "zone": "D", "order": 5, "name": "스카이", "addr": "인천광역시 제물포구 축항대로 202", "lat": 37.451023, "lon": 126.618127},
+ {"dept": "수입통관 2과", "zone": "D", "order": 6, "name": "대호", "addr": "인천광역시 제물포구 축항대로 240", "lat": 37.449821, "lon": 126.622402}
+];
+const REV = "2026-11-09";
+const ZONE_ORDER = {"수입통관 1과":["E","F","G","H"],"수입통관 2과":["A","B","C","D"]};
+const ZC = {E:"#2563eb",F:"#059669",G:"#d97706",H:"#dc2626",A:"#7c3aed",B:"#0891b2",C:"#db2777",D:"#65a30d"};
+const SHORT = d => d.replace("수입통관 ","수입");
+
+/* ===== 상태 ===== */
+const st = {dept:"all", zones:new Set(Object.keys(ZC)), q:"", sel:null, picked:new Set()};
+DATA.forEach((w,i)=>{ w.id=i; w.key=norm(w.name+" "+w.addr); });
+
+function norm(s){ return s.toLowerCase().replace(/\(주\)|\(주\)|㈜|주식회사|보세창고|창고/g,"").replace(/[\s\-·,]/g,""); }
+function deptZones(){ return st.dept==="all" ? Object.keys(ZC) : ZONE_ORDER[st.dept]; }
+function visible(w){
+  if(st.dept!=="all" && w.dept!==st.dept) return false;
+  if(!st.zones.has(w.zone)) return false;
+  if(st.q && !w.key.includes(st.q) && !w.addr.includes(st.q)) return false;
+  return true;
+}
+function sortKey(w){
+  const d = w.dept.includes("1과")?0:1;
+  return d*1000 + ZONE_ORDER[w.dept].indexOf(w.zone)*100 + w.order;
+}
+
+/* ===== 지도 ===== */
+const map = L.map("map",{zoomControl:true, attributionControl:true}).setView([37.4505,126.6155],13);
+const base = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {maxZoom:19, attribution:'&copy; OpenStreetMap'}).addTo(map);
+const sat = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+  {maxZoom:19, attribution:'Tiles &copy; Esri'});
+let satOn=false;
+document.getElementById("sat").onclick = e=>{
+  satOn=!satOn; e.target.classList.toggle("on",satOn);
+  if(satOn){ map.removeLayer(base); sat.addTo(map);} else { map.removeLayer(sat); base.addTo(map);}
+};
+
+const markerLayer = L.layerGroup().addTo(map);
+const lineLayer = L.layerGroup().addTo(map);
+const markers = {};
+
+function pinIcon(w, active){
+  return L.divIcon({className:"", iconSize:[26,26], iconAnchor:[13,26], popupAnchor:[0,-24],
+    html:`<div class="pin${active?" act":""}" style="--c:${ZC[w.zone]}"><b>${w.order}</b></div>`});
+}
+function popupHTML(w){
+  const addr = encodeURIComponent(w.addr), nm = encodeURIComponent(w.name);
+  return `<div class="pp" style="--c:${ZC[w.zone]}">
+    <span class="bdg">${w.zone}구역 ${w.order}번째</span><span class="dp">${SHORT(w.dept)}</span>
+    <h3>${w.name}</h3><p>${w.addr}</p>
+    <div class="btns">
+      <button onclick="copyAddr(${w.id})">주소 복사</button>
+      <a href="https://map.kakao.com/link/to/${nm},${w.lat},${w.lon}" target="_blank" rel="noopener">카카오맵</a>
+      <a href="https://map.naver.com/p/search/${addr}" target="_blank" rel="noopener">네이버</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=${w.lat},${w.lon}" target="_blank" rel="noopener">구글</a>
+    </div></div>`;
+}
+/* 같은 주소(삼미·인천로지스틱스)의 마커가 겹치지 않게 살짝 분리 */
+const seen = {};
+DATA.forEach(w=>{
+  const k=w.lat.toFixed(5)+","+w.lon.toFixed(5);
+  seen[k]=(seen[k]||0)+1;
+  const off=(seen[k]-1)*0.00022;
+  w.mlat=w.lat+off; w.mlon=w.lon+off;
+  const m=L.marker([w.mlat,w.mlon],{icon:pinIcon(w,false)}).bindPopup(()=>popupHTML(w));
+  m.on("click",()=>select(w.id,false));
+  markers[w.id]=m;
+});
+
+function arrowIcon(color,deg){
+  return L.divIcon({className:"",iconSize:[16,16],iconAnchor:[8,8],
+    html:`<div class="arw" style="--c:${color};transform:rotate(${deg}deg)">➤</div>`});
+}
+function draw(){
+  markerLayer.clearLayers(); lineLayer.clearLayers();
+  const vis = DATA.filter(visible);
+  vis.forEach(w=> markerLayer.addLayer(markers[w.id]));
+  // 구역별 순서선
+  const groups={};
+  vis.forEach(w=>{ const k=w.dept+"|"+w.zone; (groups[k]=groups[k]||[]).push(w); });
+  Object.values(groups).forEach(g=>{
+    if(g.length<2) return;
+    g.sort((a,b)=>a.order-b.order);
+    const pts=g.map(w=>[w.mlat,w.mlon]), c=ZC[g[0].zone];
+    L.polyline(pts,{color:c,weight:3,opacity:.65,dashArray:"7,6"}).addTo(lineLayer);
+    for(let i=0;i<pts.length-1;i++){
+      const [y1,x1]=pts[i],[y2,x2]=pts[i+1];
+      const mid=[y1+(y2-y1)*.55, x1+(x2-x1)*.55];
+      const deg=Math.atan2(x2-x1,y2-y1)*180/Math.PI;
+      L.marker(mid,{icon:arrowIcon(c,deg-90),interactive:false}).addTo(lineLayer);
+    }
+  });
+  return vis;
+}
+
+/* ===== 사이드바 ===== */
+function renderChips(){
+  const box=document.getElementById("chips"); box.innerHTML="";
+  deptZones().forEach(z=>{
+    const b=document.createElement("button");
+    b.className="chip"+(st.zones.has(z)?"":" off");
+    b.style.setProperty("--c",ZC[z]);
+    b.innerHTML=`<i></i>${z}구역`;
+    b.onclick=()=>{ st.zones.has(z)?st.zones.delete(z):st.zones.add(z); render(); };
+    box.appendChild(b);
+  });
+  const f=document.getElementById("flow");
+  const lines = (st.dept==="all"?Object.keys(ZONE_ORDER):[st.dept])
+    .map(d=>`<b>${SHORT(d)}</b> ${ZONE_ORDER[d].join(" → ")}`).join("<br>");
+  f.innerHTML="검사 진행 순서 &nbsp;" + lines;
+}
+function render(){
+  const vis = draw();
+  renderChips();
+  const list=document.getElementById("list"); list.innerHTML="";
+  if(!vis.length){ list.innerHTML='<div class="empty">조건에 맞는 창고가 없습니다.</div>'; return; }
+  vis.sort((a,b)=>sortKey(a)-sortKey(b));
+  let cur="";
+  vis.forEach(w=>{
+    const k=w.dept+"|"+w.zone;
+    if(k!==cur){
+      cur=k;
+      const n=vis.filter(x=>x.dept+"|"+x.zone===k).length;
+      const h=document.createElement("div");
+      h.className="zhead"; h.style.setProperty("--c",ZC[w.zone]);
+      h.innerHTML=`<b>${w.zone} 구역</b> ${SHORT(w.dept)}<span class="cnt">${n}곳</span>`;
+      list.appendChild(h);
+    }
+    const el=document.createElement("div");
+    el.className="item"+(st.sel===w.id?" sel":"");
+    el.style.setProperty("--c",ZC[w.zone]);
+    el.innerHTML=`<div class="num">${w.order}</div>
+      <div class="meta"><div class="nm">${w.name}</div><div class="ad">${w.addr}</div></div>
+      <button class="pick${st.picked.has(w.id)?" on":""}" title="동선에 추가">✓</button>`;
+    el.onclick=e=>{
+      if(e.target.classList.contains("pick")){
+        st.picked.has(w.id)?st.picked.delete(w.id):st.picked.add(w.id);
+        e.target.classList.toggle("on"); routebar(); e.stopPropagation(); return;
+      }
+      select(w.id,true);
+    };
+    list.appendChild(el);
+  });
+}
+function select(id,pan){
+  st.sel=id;
+  const w=DATA.find(x=>x.id===id);
+  render();                                   // 목록·마커를 먼저 다시 그린 뒤
+  DATA.forEach(x=> markers[x.id].setIcon(pinIcon(x, x.id===id)));
+  if(window.matchMedia("(max-width:760px)").matches && pan) setView("map");
+  if(pan) map.setView([w.mlat,w.mlon], Math.max(map.getZoom(),16), {animate:true});
+  markers[id].openPopup();                    // 팝업을 연다 (순서 바뀌면 닫혀버림)
+  const el=document.querySelector(".item.sel");
+  if(el) el.scrollIntoView({block:"nearest"});
+  toast(`${SHORT(w.dept)} · ${w.zone}구역 ${w.order}번째`);
+}
+
+/* ===== 동선 ===== */
+function routebar(){
+  const bar=document.getElementById("rbar");
+  bar.classList.toggle("on", st.picked.size>0);
+  document.getElementById("rn").textContent=st.picked.size;
+}
+document.getElementById("rclr").onclick=()=>{ st.picked.clear(); routebar(); render(); };
+document.getElementById("ropen").onclick=()=>{
+  const sel=DATA.filter(w=>st.picked.has(w.id)).sort((a,b)=>sortKey(a)-sortKey(b));
+  const box=document.getElementById("steps"); box.innerHTML="";
+  sel.forEach((w,i)=>{
+    const d=document.createElement("div");
+    d.className="step"; d.style.setProperty("--c",ZC[w.zone]);
+    d.innerHTML=`<div class="n">${i+1}</div>
+      <div class="meta"><div class="nm">${w.name}</div>
+      <div class="ad">${w.zone}구역 ${w.order}번째 · ${w.addr}</div></div>
+      <a class="go" target="_blank" rel="noopener"
+         href="https://map.kakao.com/link/to/${encodeURIComponent(w.name)},${w.lat},${w.lon}">길찾기</a>`;
+    box.appendChild(d);
+  });
+  document.getElementById("modal").classList.add("on");
+};
+document.getElementById("copyall").onclick=()=>{
+  const sel=DATA.filter(w=>st.picked.has(w.id)).sort((a,b)=>sortKey(a)-sortKey(b));
+  copy(sel.map((w,i)=>`${i+1}. [${SHORT(w.dept)} ${w.zone}-${w.order}] ${w.name} / ${w.addr}`).join("\n"),"동선 목록을 복사했습니다");
+};
+document.getElementById("mclose").onclick=document.getElementById("mclose2").onclick=
+  ()=>document.getElementById("modal").classList.remove("on");
+document.getElementById("modal").onclick=e=>{ if(e.target.id==="modal") e.target.classList.remove("on"); };
+
+/* ===== 유틸 ===== */
+function copy(text,msg){
+  const done=()=>toast(msg||"복사했습니다");
+  if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(text).then(done,()=>fb()); }
+  else fb();
+  function fb(){
+    const t=document.createElement("textarea"); t.value=text; t.style.position="fixed"; t.style.opacity=0;
+    document.body.appendChild(t); t.select();
+    try{ document.execCommand("copy"); done(); }catch(e){ toast("복사에 실패했습니다"); }
+    t.remove();
+  }
+}
+window.copyAddr = id => { const w=DATA.find(x=>x.id===id); copy(w.addr, "주소를 복사했습니다"); };
+let tt;
+function toast(m){
+  const el=document.getElementById("toast"); el.textContent=m; el.classList.add("on");
+  clearTimeout(tt); tt=setTimeout(()=>el.classList.remove("on"),1800);
+}
+function fitAll(){
+  const vis=DATA.filter(visible);
+  if(!vis.length) return;
+  map.fitBounds(L.latLngBounds(vis.map(w=>[w.mlat,w.mlon])),{padding:[45,45]});
+}
+function setView(v){
+  document.body.dataset.view=v;
+  document.querySelectorAll(".mtabs button").forEach(b=>b.classList.toggle("on",b.dataset.v===v));
+  if(v==="map") setTimeout(()=>map.invalidateSize(),60);
+}
+
+/* ===== 이벤트 ===== */
+document.getElementById("dept").onclick=e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  st.dept=b.dataset.d;
+  document.querySelectorAll("#dept button").forEach(x=>x.classList.toggle("on",x===b));
+  st.zones=new Set(deptZones());
+  render(); fitAll();
+};
+const q=document.getElementById("q");
+q.oninput=()=>{
+  st.q=norm(q.value)||q.value.trim();
+  if(!q.value.trim()) st.q="";
+  document.getElementById("sw").classList.toggle("has", !!q.value);
+  render();
+  const vis=DATA.filter(visible);
+  if(st.q && vis.length) fitAll();
+};
+q.onkeydown=e=>{
+  if(e.key!=="Enter") return;
+  const vis=DATA.filter(visible).sort((a,b)=>sortKey(a)-sortKey(b));
+  if(vis.length) select(vis[0].id,true);
+};
+document.getElementById("qc").onclick=()=>{ q.value=""; st.q=""; document.getElementById("sw").classList.remove("has"); render(); fitAll(); };
+document.getElementById("fit").onclick=fitAll;
+document.querySelector(".mtabs").onclick=e=>{ const b=e.target.closest("button"); if(b) setView(b.dataset.v); };
+document.getElementById("rev").textContent="기준 "+REV;
+
+render(); fitAll(); routebar();
+</script>
+</body>
+</html>
