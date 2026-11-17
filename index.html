@@ -55,9 +55,10 @@ aside{width:340px;flex:none;background:var(--panel);border-right:1px solid var(-
 
 /* ---------- sidebar ---------- */
 .filters{padding:10px 12px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:9px}
-.seg{display:flex;gap:4px;background:var(--bg);padding:3px;border-radius:10px}
-.seg button{flex:1;border:0;background:none;padding:7px 4px;border-radius:8px;font-size:13px;
-  font-weight:600;color:var(--ink2)}
+.seg{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;background:var(--bg);
+  padding:3px;border-radius:10px}
+.seg button{border:0;background:none;padding:7px 4px;border-radius:8px;font-size:12.5px;
+  font-weight:600;color:var(--ink2);letter-spacing:-.02em}
 .seg button.on{background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
 .chips{display:flex;gap:5px;flex-wrap:wrap}
 .chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 11px;
@@ -190,6 +191,7 @@ aside{width:340px;flex:none;background:var(--panel);border-right:1px solid var(-
           <button data-d="all" class="on">전체</button>
           <button data-d="수입통관 1과">수입통관1과</button>
           <button data-d="수입통관 2과">수입통관2과</button>
+          <button data-d="관리대상">관리대상</button>
         </div>
         <div class="chips" id="chips"></div>
         <div class="flow" id="flow"></div>
@@ -269,12 +271,20 @@ const DATA = [
  {"dept": "수입통관 2과", "zone": "D", "order": 3, "name": "더우", "addr": "인천광역시 제물포구 축항대로86번길 15", "lat": 37.455118, "lon": 126.606451},
  {"dept": "수입통관 2과", "zone": "D", "order": 4, "name": "동원로엑스항동보세창고", "addr": "인천광역시 제물포구 축항대로 194", "lat": 37.451578, "lon": 126.617798},
  {"dept": "수입통관 2과", "zone": "D", "order": 5, "name": "스카이", "addr": "인천광역시 제물포구 축항대로 202", "lat": 37.451023, "lon": 126.618127},
- {"dept": "수입통관 2과", "zone": "D", "order": 6, "name": "대호", "addr": "인천광역시 제물포구 축항대로 240", "lat": 37.449821, "lon": 126.622402}
+ {"dept": "수입통관 2과", "zone": "D", "order": 6, "name": "대호", "addr": "인천광역시 제물포구 축항대로 240", "lat": 37.449821, "lon": 126.622402},
+ {"dept": "관리대상", "zone": "M", "order": 1, "name": "인천세관 지정장치장(관리대상화물)", "addr": "인천광역시 연수구 인천타워대로599번길 67", "lat": 37.421781, "lon": 126.616527}
 ];
 const REV = "2026-11-09";
-const ZONE_ORDER = {"수입통관 1과":["E","F","G","H"],"수입통관 2과":["A","B","C","D"]};
-const ZC = {E:"#2563eb",F:"#059669",G:"#d97706",H:"#dc2626",A:"#7c3aed",B:"#0891b2",C:"#db2777",D:"#65a30d"};
+const ZONE_ORDER = {"수입통관 1과":["E","F","G","H"],"수입통관 2과":["A","B","C","D"],"관리대상":["M"]};
+const DEPTS = ["수입통관 1과","수입통관 2과","관리대상"];
+const ZC = {E:"#2563eb",F:"#059669",G:"#d97706",H:"#dc2626",
+            A:"#7c3aed",B:"#0891b2",C:"#db2777",D:"#65a30d",M:"#64748b"};
+const ZLABEL = {M:"지정장치장"};          // 구역 순서가 아닌 별도 분류
 const SHORT = d => d.replace(/\s/g,"");   // "수입통관 1과" → "수입통관1과"
+const zoneLabel = z => ZLABEL[z] || (z+" 구역");
+const zoneChip  = z => ZLABEL[z] || (z+"구역");
+const posLabel  = w => ZLABEL[w.zone] || `${w.zone}구역 ${w.order}번째`;
+const pinLabel  = w => ZLABEL[w.zone] ? "관" : w.order;
 
 /* ===== 상태 ===== */
 const st = {dept:"all", zones:new Set(Object.keys(ZC)), q:"", sel:null, picked:new Set()};
@@ -289,8 +299,7 @@ function visible(w){
   return true;
 }
 function sortKey(w){
-  const d = w.dept.includes("1과")?0:1;
-  return d*1000 + ZONE_ORDER[w.dept].indexOf(w.zone)*100 + w.order;
+  return DEPTS.indexOf(w.dept)*1000 + ZONE_ORDER[w.dept].indexOf(w.zone)*100 + w.order;
 }
 
 /* ===== 지도 ===== */
@@ -311,12 +320,12 @@ const markers = {};
 
 function pinIcon(w, active){
   return L.divIcon({className:"", iconSize:[26,26], iconAnchor:[13,26], popupAnchor:[0,-24],
-    html:`<div class="pin${active?" act":""}" style="--c:${ZC[w.zone]}"><b>${w.order}</b></div>`});
+    html:`<div class="pin${active?" act":""}" style="--c:${ZC[w.zone]}"><b>${pinLabel(w)}</b></div>`});
 }
 function popupHTML(w){
   const addr = encodeURIComponent(w.addr), nm = encodeURIComponent(w.name);
   return `<div class="pp" style="--c:${ZC[w.zone]}">
-    <span class="bdg">${w.zone}구역 ${w.order}번째</span><span class="dp">${SHORT(w.dept)}</span>
+    <span class="bdg">${posLabel(w)}</span><span class="dp">${SHORT(w.dept)}</span>
     <h3>${w.name}</h3><p>${w.addr}</p>
     <div class="btns">
       <button onclick="copyAddr(${w.id})">주소 복사</button>
@@ -370,14 +379,14 @@ function renderChips(){
     const b=document.createElement("button");
     b.className="chip"+(st.zones.has(z)?"":" off");
     b.style.setProperty("--c",ZC[z]);
-    b.innerHTML=`<i></i>${z}구역`;
+    b.innerHTML=`<i></i>${zoneChip(z)}`;
     b.onclick=()=>{ st.zones.has(z)?st.zones.delete(z):st.zones.add(z); render(); };
     box.appendChild(b);
   });
   const f=document.getElementById("flow");
-  const lines = (st.dept==="all"?Object.keys(ZONE_ORDER):[st.dept])
+  const lines = (st.dept==="all"?DEPTS:[st.dept]).filter(d=>ZONE_ORDER[d].length>1)
     .map(d=>`<b>${SHORT(d)}</b> ${ZONE_ORDER[d].join(" → ")}`).join("<br>");
-  f.innerHTML="검사 진행 순서 &nbsp;" + lines;
+  f.innerHTML = lines ? "검사 진행 순서 &nbsp;" + lines : "";
 }
 function render(){
   const vis = draw();
@@ -395,15 +404,16 @@ function render(){
       const h=document.createElement("div");
       h.className="zhead"+(solo?" solo":""); h.style.setProperty("--c",ZC[w.zone]);
       h.title=solo?"모든 구역 다시 보기":"이 구역만 보기";
-      h.innerHTML=`<b>${w.zone} 구역</b> ${SHORT(w.dept)}`+
-        `<span class="only">${solo?"전체 보기":"이 구역만"}</span><span class="cnt">${n}곳</span>`;
+      h.innerHTML=`<b>${zoneLabel(w.zone)}</b> ${SHORT(w.dept)}`+
+        `<span class="only">${solo?"전체 보기":(ZLABEL[w.zone]?"이것만":"이 구역만")}</span>`+
+        `<span class="cnt">${n}곳</span>`;
       h.onclick=()=>soloZone(w.dept,w.zone);
       list.appendChild(h);
     }
     const el=document.createElement("div");
     el.className="item"+(st.sel===w.id?" sel":"");
     el.style.setProperty("--c",ZC[w.zone]);
-    el.innerHTML=`<div class="num">${w.order}</div>
+    el.innerHTML=`<div class="num">${pinLabel(w)}</div>
       <div class="meta"><div class="nm">${w.name}</div><div class="ad">${w.addr}</div></div>
       <button class="pick${st.picked.has(w.id)?" on":""}" title="동선에 추가">✓</button>`;
     el.onclick=e=>{
@@ -426,7 +436,7 @@ function select(id,pan){
   markers[id].openPopup();                    // 팝업을 연다 (순서 바뀌면 닫혀버림)
   const el=document.querySelector(".item.sel");
   if(el) el.scrollIntoView({block:"nearest"});
-  toast(`${SHORT(w.dept)} · ${w.zone}구역 ${w.order}번째`);
+  toast(`${SHORT(w.dept)} · ${posLabel(w)}`);
 }
 
 /* ===== 동선 ===== */
@@ -444,7 +454,7 @@ document.getElementById("ropen").onclick=()=>{
     d.className="step"; d.style.setProperty("--c",ZC[w.zone]);
     d.innerHTML=`<div class="n">${i+1}</div>
       <div class="meta"><div class="nm">${w.name}</div>
-      <div class="ad">${w.zone}구역 ${w.order}번째 · ${w.addr}</div></div>
+      <div class="ad">${posLabel(w)} · ${w.addr}</div></div>
       <a class="go" target="_blank" rel="noopener"
          href="https://map.kakao.com/link/to/${encodeURIComponent(w.name)},${w.lat},${w.lon}">길찾기</a>`;
     box.appendChild(d);
@@ -453,7 +463,7 @@ document.getElementById("ropen").onclick=()=>{
 };
 document.getElementById("copyall").onclick=()=>{
   const sel=DATA.filter(w=>st.picked.has(w.id)).sort((a,b)=>sortKey(a)-sortKey(b));
-  copy(sel.map((w,i)=>`${i+1}. [${SHORT(w.dept)} ${w.zone}-${w.order}] ${w.name} / ${w.addr}`).join("\n"),"동선 목록을 복사했습니다");
+  copy(sel.map((w,i)=>`${i+1}. [${SHORT(w.dept)} ${ZLABEL[w.zone]||w.zone+"-"+w.order}] ${w.name} / ${w.addr}`).join("\n"),"동선 목록을 복사했습니다");
 };
 document.getElementById("mclose").onclick=document.getElementById("mclose2").onclick=
   ()=>document.getElementById("modal").classList.remove("on");
